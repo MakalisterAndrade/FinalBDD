@@ -1,45 +1,26 @@
-from kivy.lang import Builder
-from kivy.uix.screenmanager import ScreenManager, Screen
 from kivymd.app import MDApp
 
+from view.python.manager import ScreenManagement
 
-class MainScreen(Screen):
-
-    Builder.load_file("view/main.kv")
-
-
-class NewScreen(Screen):
-
-    Builder.load_file("view/new.kv")
+from view.python.main import MainScreen
 
 
-class EditScreen(Screen):
+class Evento(MDApp):
 
-    Builder.load_file("view/edit.kv")
+    def __init__(self):
 
-
-class ScreenManagement(ScreenManager):
-
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-
-    def main_screen(self):
-        self.current = "main"
-
-    def new_screen(self):
-        self.current = "new"
-
-    def edit_screen(self):
-        self.current = "edit"
-
-
-class CBBD(MDApp):
+        super().__init__()
+        self.manager = ScreenManagement()
 
     def build(self):
-        Builder.load_file("view/management.kv")
-        self.root = ScreenManagement()
-        return self.root
+
+        main = MainScreen(name="main")
+
+        self.manager.add_widget(main)
+        self.manager.main()
+
+        return self.manager
 
 
 if __name__ == '__main__':
-    CBBD().run()
+    Evento().run()

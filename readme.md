@@ -16,8 +16,12 @@ Disciplina: Banco de Dados e Programação II
 
 ## Modelo Físico
 
-Em breve.
+![modelo_Físico](/db/fisicodiagram.png)
 
-## Printscreens telas
+#### Modelo Físico MySQL
 
-Em breve.
+![modelo_físico](db/físico.sql)
+
+## Printscreens
+
+## None

@@ -1,0 +1,36 @@
+<LocalScreen>:
+    name: "Local"
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDTopAppBar:
+            id: toolbar
+            title: "Local da Atividade"
+            left_action_items: [["arrow-left", lambda result: root.manager.back()]]
+
+        MDBoxLayout:
+            orientation: "vertical"
+            MDList:
+                padding: 50
+                spacing: 5
+                MDTextField:
+                    id: nome
+                    hint_text: "Nome"
+                    write_tab: False
+
+                MDTextField:
+                    id: capacidade
+                    hint_text: "Capacidade"
+                    write_tab: False
+
+
+
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 30
+                spacing: 5
+                MDRaisedButton:
+                    text: "Salvar"
+                    pos_hint: {"right": 0.99}
+                    size_hint: 0.2, 0
+                    # on_release: root.get()

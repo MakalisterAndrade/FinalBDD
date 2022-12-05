@@ -1,0 +1,36 @@
+<AtividadeScreen>:
+    name: "atividade"
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDTopAppBar:
+            id: toolbar
+            title: "Atividade"
+            left_action_items: [["arrow-left", lambda result: root.manager.back()]]
+
+        MDBoxLayout:
+            orientation: "vertical"
+            MDList:
+                padding: 50
+                spacing: 5
+                MDTextField:
+                    id: data
+                    hint_text: "Data"
+                    write_tab: False
+
+                MDTextField:
+                    id: horario
+                    hint_text: "Horario"
+                    write_tab: False
+
+
+
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 30
+                spacing: 5
+                MDRaisedButton:
+                    text: "Salvar"
+                    pos_hint: {"right": 0.99}
+                    size_hint: 0.2, 0
+                    # on_release: root.get()

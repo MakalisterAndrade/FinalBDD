@@ -1,0 +1,30 @@
+<Tab>
+
+<MainScreen>:
+    name: "main"
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDTopAppBar:
+            id: toolbar
+            title: "CBBD"
+            right_action_items: [["magnify"]]
+
+        MDTabs:
+            Tab:
+                title: "Atividade"
+
+            Tab:
+                title: "Local"
+
+
+
+    MDBoxLayout:
+        padding: 35
+        orientation: "vertical"
+
+        MDFloatingActionButtonSpeedDial:
+            data: root.data
+            root_button_anim: True
+            md_bg_color: app.theme_cls.primary_color
+            pos_hint: {"right": 0.99}
