@@ -13,9 +13,9 @@ class MainScreen(Screen):
     def __init__(self, **kw):
         self.data = {
             'Atividade': ["account", "on_press", self.atividade],
-            'LocalAtividade': ["book-open-page-variant-outline", "on_press", self.local]
+            'Local': ["book-open-page-variant-outline", "on_press", self.local]
         }
-        Builder.load_file("view/src/main.kv")
+        Builder.load_file("view/source/main.kv")
         super().__init__(**kw)
 
     def on_enter(self):
