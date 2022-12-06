@@ -22,6 +22,3 @@ Disciplina: Banco de Dados e Programação II
 
 ![modelo_físico](db/físico.sql)
 
-## Printscreens
-
-## None
