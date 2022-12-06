@@ -13,7 +13,8 @@ class MainScreen(Screen):
     def __init__(self, **kw):
         self.data = {
             'Atividade': ["account", "on_press", self.atividade],
-            'Local': ["book-open-page-variant-outline", "on_press", self.local]
+            'Local': ["book-open-page-variant-outline", "on_press", self.local],
+            'Local e Atividade': ["book-open-page-variant-outline", "on_press", self.atividade]
         }
         Builder.load_file("view/source/main.kv")
         super().__init__(**kw)
