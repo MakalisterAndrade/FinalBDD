@@ -1,0 +1,30 @@
+from peewee import ModelSelect
+
+from model.models import LocalAtividade
+
+
+class LocalAtividadeCtrl:
+
+    def salvar(self, id=None, local=None, atividade=None):
+        try:
+            if id:
+                localatividade = LocalAtividade.get_by_id(id)
+                localatividade.local = local
+                localatividade.atividade = atividade
+            else:
+                localatividade = LocalAtividade(local=local, atividade=atividade)
+            localatividade.save()
+            return "Operação realizada com sucesso!!!"
+
+        except Exception as e:
+            print(e)
+            return "Não foi possível salvar ou atualizar"
+
+    def excluir(self, id):
+        try:
+            localatividade = LocalAtividade.get_by_id(id)
+            localatividade.delete_instance()
+            return "Artigo excluído com sucesso!"
+        except Exception as e:
+            print(e)
+            return "Não foi possível excluir o LocalAtividade!"
