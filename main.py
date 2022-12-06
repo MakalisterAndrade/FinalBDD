@@ -5,6 +5,7 @@ from view.python.manager import ScreenManagement
 from view.python.main import MainScreen
 from view.python.atividade import AtividadeScreen
 from view.python.local import LocalScreen
+from view.python.localatividade import LocalAtividadeScreen
 
 class CBBD(MDApp):
 
@@ -21,10 +22,12 @@ class CBBD(MDApp):
         self.manager.main()
         atividade = AtividadeScreen(name="atividade")
         local = LocalScreen(name="local")
+        localatividade = LocalAtividadeScreen(name="localatividade")
 
         self.manager.add_widget(main)
         self.manager.add_widget(atividade)
         self.manager.add_widget(local)
+        self.manager.add_widget(localatividade)
 
         self.manager.main()
 
