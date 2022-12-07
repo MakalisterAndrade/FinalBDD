@@ -25,7 +25,7 @@ class Revisor(Base):
     numero = peewee.IntegerField()
     bairro = peewee.CharField(max_length=30)
     cidade = peewee.CharField(max_length=50)
-    unidade_federativa = peewee.CharField(max_length=2)
+    uf = peewee.CharField(max_length=2)
 
 
 class Especialidade(Base):
